@@ -1,0 +1,13 @@
+inherit cmake
+
+DESCRIPTION="MSN Messenger protocol library"
+HOMEPAGE="http://libmsn.bluewire.org.nz/"
+SRC_URI="mirror://sourceforge/libmsn/${P/_/-}.tar.bz2"
+PATCH_URI="4.0-dllexport.patch"
+
+SRC_DIR=${P/_/-}
+
+PKG_NAMES="${PN} ${PN}0 ${PN}-devel"
+libmsn0_CONTENTS="usr/bin/cygmsn-0.dll usr/share/doc/"
+libmsn_devel_CONTENTS="usr/include/ usr/lib/"
+PKG_IGNORE="usr/bin/msntest.exe"

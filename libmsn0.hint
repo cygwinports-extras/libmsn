@@ -1,0 +1,7 @@
+category: Net
+requires: cygwin libgcc1 libstdc++6 openssl
+external-source: libmsn
+sdesc: "MSN Messenger protocol library (runtime)"
+ldesc: "libmsn is a C++ library for Microsoft's MSN Messenger service. 
+It provides a high-level interface that allows an application to access 
+instant messaging features with ease."
