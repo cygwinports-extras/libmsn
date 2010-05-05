@@ -5,21 +5,19 @@ provides a high-level interface that allows an application to access
 instant messaging features with ease.
 
 Runtime requirements:
-  cygwin-1.7.0-49
-  libgcc1-4.3.2-2
-  libstdc++6-4.3.2-2
-  openssl-0.9.8k-2
+  cygwin-1.7.5-1
+  libgcc1-4.3.4-3
+  libstdc++6-4.3.4-3
+  openssl-0.9.8n-1
 
 Build requirements:
 (besides corresponding -devel packages)
-  binutils-20080624-2
-  cmake-2.6.4-10
-  cygport-0.9.6-1
-  gawk-3.1.6-2
-  gcc4-core-4.3.2-2
-  gcc4-g++-4.3.2-2
+  binutils-2.20.51-2
+  cmake-2.8.0-11
+  cygport-0.9.83-1
+  gcc4-core-4.3.4-3
+  gcc4-g++-4.3.4-3
   make-3.81-2
-  sed-4.1.5-2
 
 Canonical website:
   http://libmsn.bluewire.org.nz/
@@ -30,51 +28,23 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack libmsn-4.0_beta6-X-src.tar.bz2
+  unpack libmsn-4.1-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./libmsn-4.0_beta6-X.cygport all
+  cygport ./libmsn-4.1-X.cygport all
 
 This will create:
-  /usr/src/libmsn-4.0_beta6-X-src.tar.bz2
-  /usr/src/libmsn-devel-4.0_beta6-X.tar.bz2
-  /usr/src/libmsn0-4.0_beta6-X.tar.bz2
+  /usr/src/libmsn-4.1-X-src.tar.bz2
+  /usr/src/libmsn-devel-4.1-X.tar.bz2
+  /usr/src/libmsn0.3-4.1-X.tar.bz2
 
 -------------------------------------------
 
-Files included in the binary packages:
-
-(libmsn0)
-  /usr/bin/cygmsn-0.dll
-  /usr/share/doc/libmsn/COPYING
-  /usr/share/doc/libmsn/README
-  /usr/share/doc/libmsn/THANKS
-  /usr/share/doc/libmsn/TODO
-
-(libmsn-devel)
-  /usr/include/msn/authdata.h
-  /usr/include/msn/buddy.h
-  /usr/include/msn/connection.h
-  /usr/include/msn/errorcodes.h
-  /usr/include/msn/externals.h
-  /usr/include/msn/libmsn_export.h
-  /usr/include/msn/message.h
-  /usr/include/msn/msn.h
-  /usr/include/msn/msnobject.h
-  /usr/include/msn/notificationserver.h
-  /usr/include/msn/p2p.h
-  /usr/include/msn/passport.h
-  /usr/include/msn/soap.h
-  /usr/include/msn/sstream_fix.h
-  /usr/include/msn/switchboardserver.h
-  /usr/include/msn/util.h
-  /usr/lib/libmsn.dll.a
-  /usr/lib/pkgconfig/libmsn.pc
-
-------------------
-
 Port Notes:
+
+----- version 4.1-1 -----
+Version bump.
 
 ----- version 4.0_beta6-1 -----
 Initial release for Cygwin 1.7.

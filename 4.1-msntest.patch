@@ -1,0 +1,37 @@
+--- origsrc/libmsn-4.1/msntest/msntest.cpp	2010-01-05 06:07:08.000000000 -0600
++++ src/libmsn-4.1/msntest/msntest.cpp	2010-05-05 02:28:37.494234400 -0500
+@@ -936,7 +936,7 @@ void Callbacks::gotInstantMessage(MSN::S
+ 
+ void Callbacks::gotEmoticonNotification(MSN::SwitchboardServerConnection * conn, MSN::Passport username, std::string alias, std::string msnobject)
+ {
+-    std::string filename2("/tmp/emoticon.bin"+MSN::toStr(sessionID));
++    std::string filename2("/tmp/emoticon.bin"+MSN::unsignedToStr(sessionID));
+     printf("--- Emoticon '%s' from %s -> %s\n", alias.c_str(), username.c_str(), msnobject.c_str());
+     conn->requestEmoticon(sessionID++, filename2, msnobject, alias);
+ }
+@@ -962,14 +962,14 @@ void Callbacks::gotNudge(MSN::Switchboar
+ void Callbacks::gotVoiceClipNotification(MSN::SwitchboardServerConnection * conn, MSN::Passport username, std::string msnobject)
+ {
+     printf("\t%s sent you a voice clip...\n", username.c_str());
+-    std::string filename2("/tmp/voiceclip.bin"+MSN::toStr(sessionID));
++    std::string filename2("/tmp/voiceclip.bin"+MSN::unsignedToStr(sessionID));
+     conn->requestVoiceClip(sessionID++, filename2, msnobject);
+ }
+ 
+ void Callbacks::gotWinkNotification(MSN::SwitchboardServerConnection * conn, MSN::Passport username, std::string msnobject)
+ {
+     printf("\t%s sent you a Wink...\n", username.c_str());
+-    std::string filename2("/tmp/wink.bin"+MSN::toStr(sessionID));
++    std::string filename2("/tmp/wink.bin"+MSN::unsignedToStr(sessionID));
+     // you should generate a random sessionID number
+     conn->requestWink(sessionID++, filename2, msnobject);
+ }
+@@ -978,7 +978,7 @@ void Callbacks::gotInk(MSN::SwitchboardS
+ {
+     // image variable is the base64 encoded gif file
+     printf("\t%s sent you an Ink...\n", username.c_str());
+-//  std::string filename2("/tmp/ink.bin"+MSN::toStr(sessionID));
++//  std::string filename2("/tmp/ink.bin"+MSN::unsignedToStr(sessionID));
+     // you should generate a random sessionID number
+ //  conn->requestFile(sessionID++, filename2, msnobject);
+ }
