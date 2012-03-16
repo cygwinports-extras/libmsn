@@ -1,5 +1,5 @@
 category: Net
-requires: libgcc1 libstdc++6 libopenssl098
+requires: libgcc1 libstdc++6 libopenssl100
 external-source: libmsn
 sdesc: "MSN Messenger protocol library (runtime)"
 ldesc: "libmsn is a C++ library for Microsoft's MSN Messenger service. 
