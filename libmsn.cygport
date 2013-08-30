@@ -1,0 +1,18 @@
+inherit cmake
+
+NAME="libmsn"
+VERSION=4.2.1
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="MSN Messenger protocol library"
+DESCRIPTION="libmsn is a C++ library for Microsoft's MSN Messenger service.
+It provides a high-level interface that allows an application to access
+instant messaging features with ease."
+HOMEPAGE="http://sourceforge.net/projects/libmsn/"
+SRC_URI="mirror://sourceforge/libmsn/libmsn-${VERSION}.tar.bz2"
+PATCH_URI="4.1-msntest.patch"
+
+PKG_NAMES="libmsn0.3 libmsn-devel"
+libmsn0_3_CONTENTS="usr/bin/cygmsn-0.3.dll usr/share/doc/"
+libmsn_devel_CONTENTS="usr/include/ usr/lib/"
+PKG_IGNORE="usr/bin/msntest.exe"
