@@ -11,6 +11,7 @@ instant messaging features with ease."
 HOMEPAGE="http://sourceforge.net/projects/libmsn/"
 SRC_URI="mirror://sourceforge/libmsn/libmsn-${VERSION}.tar.bz2"
 PATCH_URI="4.1-msntest.patch"
+PATCH_URI+=" http://pkgs.fedoraproject.org/cgit/libmsn.git/plain/libmsn-4.2.1-unistd.patch"
 
 PKG_NAMES="libmsn0.3 libmsn-devel"
 libmsn0_3_CONTENTS="usr/bin/cygmsn-0.3.dll usr/share/doc/"
